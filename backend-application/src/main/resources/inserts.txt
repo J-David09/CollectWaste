@@ -1,0 +1,22 @@
+INSERT INTO public."role" (id, "name")
+VALUES(0, 'Cliente'),
+(1, 'Administrador');
+
+INSERT INTO public."user"
+(id, "name", user_name, "password" , "role")
+VALUES(1001469906, 'Juan David', 'jduribe', 'Martes100!', 1),
+(100123, 'Cliente 1', 'cliente1', 'Martes100!', 0),
+(100132, 'Cliente 2', 'cliente2', 'Martes100!', 0);
+
+INSERT INTO public.waste_type
+(id, "name" , description)
+VALUES(nextval('waste_type_id_seq'::regclass), 'Residuos domésticos', 'creados en los hogares como fruto de su actividad.'),
+(nextval('waste_type_id_seq'::regclass), 'Residuos comerciales', 'son aquellos residuos que se han generado a raíz del comercio.'),
+(nextval('waste_type_id_seq'::regclass), 'Residuos industriales', 'son residuos generados a raíz de la actividad industrial.'),
+(nextval('waste_type_id_seq'::regclass), 'Escombros y residuos de construcción', 'Las obras de construcción o demolición son las responsables de generar este tipo de residuos.'),
+(nextval('waste_type_id_seq'::regclass), 'Residuos mineros', 'La investigación de recursos geológicos genera los denominados residuos mineros.'),
+(nextval('waste_type_id_seq'::regclass), 'Biorresiduos', 'En este caso hablamos de residuos biodegradables.'),
+(nextval('waste_type_id_seq'::regclass), 'Residuos sanitarios', 'Son los residuos generados en centros, servicios o establecimientos sanitarios.'),
+(nextval('waste_type_id_seq'::regclass), 'Subproductos de animales', 'Son los productos obtenidos a partir de animales, no destinados al consumo humano.'),
+(nextval('waste_type_id_seq'::regclass), 'Otro', 'Otro tipo de residuo.');
+
