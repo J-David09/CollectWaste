@@ -16,10 +16,9 @@ public class Report {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @Column(name = "user_id", nullable = false)
     @Getter @Setter
-    private User user;
+    private int user;
 
     @Getter @Setter
     @Column(name = "direction", length = 100, nullable = false)
@@ -41,8 +40,7 @@ public class Report {
     @Column(name = "observations", length = 100, nullable = false)
     private String observations;
 
-    @ManyToOne
     @Getter @Setter
-    @JoinColumn(name = "waste_type", nullable = false)
-    private WasteType wasteType;
+    @Column(name = "waste_type", nullable = false)
+    private int wasteType;
 }

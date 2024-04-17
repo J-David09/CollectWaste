@@ -25,8 +25,7 @@ public class User {
     @Column(name = "password", length = 100, nullable = false)
     private String password;
 
-    @ManyToOne
-    @JoinColumn(name = "role", nullable = false)
     @Getter @Setter
-    private Role role;
+    @Column(name = "role", nullable = false)
+    private int role;
 }

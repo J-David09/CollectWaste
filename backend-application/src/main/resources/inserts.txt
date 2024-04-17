@@ -1,3 +1,14 @@
+ALTER TABLE public."user"
+ADD FOREIGN KEY ("role") REFERENCES role(id);
+
+ALTER TABLE public."report"
+ADD CONSTRAINT FK_REPORT_WASTE_TYPE
+FOREIGN KEY (waste_type) REFERENCES waste_type(id);
+
+ALTER TABLE report
+ADD CONSTRAINT FK_REPORT_USER
+FOREIGN KEY ("user_id") REFERENCES public."user"(id);
+
 INSERT INTO public."role" (id, "name")
 VALUES(0, 'Cliente'),
 (1, 'Administrador');
@@ -19,4 +30,3 @@ VALUES(nextval('waste_type_id_seq'::regclass), 'Residuos domésticos', 'creados 
 (nextval('waste_type_id_seq'::regclass), 'Residuos sanitarios', 'Son los residuos generados en centros, servicios o establecimientos sanitarios.'),
 (nextval('waste_type_id_seq'::regclass), 'Subproductos de animales', 'Son los productos obtenidos a partir de animales, no destinados al consumo humano.'),
 (nextval('waste_type_id_seq'::regclass), 'Otro', 'Otro tipo de residuo.');
-
