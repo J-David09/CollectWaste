@@ -10,12 +10,20 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { FollowupComponent } from './pages/followup/followup.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    GarbageCollectionComponent
+    GarbageCollectionComponent,
+    TermsConditionsComponent,
+    AboutusComponent,
+    FollowupComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +32,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
