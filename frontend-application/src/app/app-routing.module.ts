@@ -7,6 +7,7 @@ import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { FollowupComponent } from './pages/followup/followup.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'garbage', component: GarbageCollectionComponent },
   { path: 'terms', component: TermsConditionsComponent },
