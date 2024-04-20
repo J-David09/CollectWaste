@@ -1,0 +1,36 @@
+.fondo {
+    background-image: url(https://cdnwordpresstest-f0ekdgevcngegudb.z01.azurefd.net/es/wp-content/uploads/2023/03/Escombros-Emvarias-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100% !important; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+}
+.logo-right {
+    align-content: end;
+}
+
+mat-card {
+    opacity: 0.5;
+}
+mat-card:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+img {
+    opacity: 0.8;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+button {
+    width: 100%
+}
+h1 {
+    color: brown;
+    text-decoration: underline;
+}
