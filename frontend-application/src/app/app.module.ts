@@ -15,6 +15,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { FollowupComponent } from './pages/followup/followup.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { LoginComponent } from './security/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     GarbageCollectionComponent,
     TermsConditionsComponent,
     AboutusComponent,
-    FollowupComponent
+    FollowupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatCardModule,
     MatDividerModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
