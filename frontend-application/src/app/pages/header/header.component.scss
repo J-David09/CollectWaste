@@ -1,0 +1,41 @@
+header {
+    position: fixed; /* Hace que el encabezado sea fijo */
+    top: 0; /* Coloca el encabezado en la parte superior */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Aumenta el padding para hacer el encabezado más grande */
+    background-color: #333;
+    color: white;
+    height: 25px; /* Aumenta la altura del encabezado */
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-left button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right span {
+    margin-right: 10px;
+  }
+  
+  .header-right a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

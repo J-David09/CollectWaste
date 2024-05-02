@@ -18,6 +18,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { LoginComponent } from './security/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     TermsConditionsComponent,
     AboutusComponent,
     FollowupComponent,
-    LoginComponent
+    LoginComponent,
+    AdminHomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

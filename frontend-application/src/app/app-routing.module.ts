@@ -6,15 +6,18 @@ import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditi
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { FollowupComponent } from './pages/followup/followup.component';
 import { LoginComponent } from './security/login/login.component';
+import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: 'adminHome', component: AdminHomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'garbage', component: GarbageCollectionComponent },
   { path: 'terms', component: TermsConditionsComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'followup', component: FollowupComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({

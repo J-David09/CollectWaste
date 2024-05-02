@@ -28,9 +28,14 @@ export class LoginComponent {
         this.user = response;
         localStorage.setItem('id', this.user.id?.toString() || "");
         localStorage.setItem('name', this.user.name?.toString() || "");
-        localStorage.setItem('userName', response.userName?.toString() || "");
-        localStorage.setItem('role', response.role?.toString() || "");
-        this.router.navigate(["/home"]);
+        localStorage.setItem('userName', this.user.userName?.toString() || "");
+        localStorage.setItem('role', this.user.role?.toString() || "");
+        if(this.user.role == 1) {
+          this.router.navigate(["/adminHome"]);
+        } else {
+          this.router.navigate(["/home"]);
+        }
+        
       } else {
         this.showError = true;
       }
