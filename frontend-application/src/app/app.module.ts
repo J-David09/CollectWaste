@@ -20,6 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SolicitudesComponent } from './pages/solicitudes/solicitudes.component';
+import { ParametrosComponent } from './pages/parametros/parametros.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import { HeaderComponent } from './pages/header/header.component';
     FollowupComponent,
     LoginComponent,
     AdminHomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SolicitudesComponent,
+    ParametrosComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,9 @@ import { HeaderComponent } from './pages/header/header.component';
     MatFormFieldModule,
     MatStepperModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+    NgbModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

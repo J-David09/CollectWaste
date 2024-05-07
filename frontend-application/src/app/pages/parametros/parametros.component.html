@@ -1,0 +1,89 @@
+<div class="parametros-container">
+    <h2 class="titulo">Parámetros</h2>
+    <button class="btn-agregar" (click)="openAddModal(addModal)"><fa-icon [icon]="faDumpster"></fa-icon> Agregar nuevo parámetro</button>
+    <table class="tabla-parametros">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se colocarán los datos de los parámetros -->
+            <tr *ngFor="let waste of wasteTypes">
+                <td>{{waste.name}}</td>
+                <td>{{waste.description}}</td>
+                <td>
+                    <button class="btn-editar" (click)="openEditModal(editModal, waste)"><fa-icon [icon]="faPencil"></fa-icon> Editar</button>
+                    <button class="btn-eliminar" (click)="openEditModal(deleteModal, waste)"><fa-icon [icon]="faRemove"></fa-icon> Eliminar</button>
+                </td>
+            </tr>
+            <!-- Repite este bloque para cada parámetro en tus datos -->
+        </tbody>
+    </table>
+</div>
+
+
+<ng-template #editModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Editar parámetro</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="number" class="form-control" id="id" [(ngModel)]="selectedWaste.id" name="id" disabled>
+          </div>
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="selectedWaste.name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción:</label>
+          <input type="text" class="form-control" id="description" [(ngModel)]="selectedWaste.description" name="description">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeEditModal()">Cerrar</button>
+      <button type="button" class="btn btn-primary" (click)="editWaste()">Guardar cambios</button>
+    </div>
+</ng-template>
+
+
+<ng-template #deleteModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Eliminar parametro</h4>
+    </div>
+    <div class="modal-body">
+        <h2>¿Seguro de que quieres eliminar el parametro {{selectedWaste.name}}?</h2>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeDeleteModal()">Cancelar</button>
+      <button type="button" class="btn btn-danger" (click)="deleteWaste()">Eliminar</button>
+    </div>
+</ng-template>
+
+
+<ng-template #addModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Añadir parámetro</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="selectedWaste.name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción:</label>
+          <input type="text" class="form-control" id="description" [(ngModel)]="selectedWaste.description" name="description">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeAddModal()">Cerrar</button>
+      <button type="button" class="btn btn-primary" (click)="addWaste()">Guardar cambios</button>
+    </div>
+</ng-template>

@@ -15,7 +15,11 @@ export class HeaderComponent {
   }
 
   goToHome(): void {
-    this.router.navigate(['/home']);
+    if(localStorage.getItem("role")?.toString() == "1"){
+      this.router.navigate(['/adminHome']);
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 
   logout(): void {

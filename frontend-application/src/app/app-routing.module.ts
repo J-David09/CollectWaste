@@ -7,9 +7,13 @@ import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { FollowupComponent } from './pages/followup/followup.component';
 import { LoginComponent } from './security/login/login.component';
 import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
+import { SolicitudesComponent } from './pages/solicitudes/solicitudes.component';
+import { ParametrosComponent } from './pages/parametros/parametros.component';
 
 const routes: Routes = [
   { path: 'adminHome', component: AdminHomeComponent },
+  { path: 'solicitudes', component: SolicitudesComponent},
+  { path: 'parametros', component: ParametrosComponent},
   { path: 'home', component: HomeComponent },
   { path: 'garbage', component: GarbageCollectionComponent },
   { path: 'terms', component: TermsConditionsComponent },
