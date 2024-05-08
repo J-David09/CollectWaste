@@ -1,3 +1,22 @@
+
+.logo-right {
+    align-content: end;
+}
+
+mat-card {
+    opacity: 0.6;
+}
+mat-card:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+img {
+    opacity: 0.8;
+}
+button {
+    width: 100%
+}
+
 .fondo {
     background-image: url(https://cdnwordpresstest-f0ekdgevcngegudb.z01.azurefd.net/es/wp-content/uploads/2023/03/Escombros-Emvarias-1.jpg);
     background-repeat: no-repeat;
@@ -12,7 +31,7 @@
 
 
 .contenedor {
-    max-width: 600px; /* Establece el ancho máximo del contenedor */
+    max-width: 500px; /* Establece el ancho máximo del contenedor */
     margin: 20px auto; /* Centra el contenedor horizontalmente */
     background-color: white;
     border-radius: 10px;
@@ -25,13 +44,12 @@ footer {
     align-items: center; /* Centra los elementos horizontalmente */
 }
 
-.mat-card {
-    width: 100%; /* Establece el ancho al 100% para ocupar todo el ancho del contenedor */
-    max-width: 400px; /* Establece el ancho máximo de los mat-card */
-    margin: 10px auto;
+mat-card {
+    width: 100%;
+    margin: 5px auto;
 }
 
-.mat-card-content {
+mat-card-content {
     width: 100%; /* Establece el ancho al 100% para ocupar todo el ancho del mat-card */
 }
 

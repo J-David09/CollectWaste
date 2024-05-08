@@ -1,35 +1,39 @@
 <div class="fondo">
-    <div align="center" style="align-items: center; display: flex; justify-content: center; height: 200px;">
-        <img src="./../../../assets/logo_2.png" width="200" height="160" >
+    <div class="contenedor">
+        <h1 class="titulo">Vista de administrador</h1>
+        <div align="center" style="align-items: center; display: flex; justify-content: center; height: 200px;">
+            <img src="./../../../assets/logo_2.png" width="200" height="160">
+        </div>
+        <footer>
+            <mat-card class="tarjeta">
+                <mat-card-content routerLink="/terms">Collect-Waste</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+            <mat-card class="tarjeta">
+                <mat-card-content routerLink="/aboutus">About us</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+            <mat-card class="tarjeta">
+                <mat-card-content routerLink="/followup">Follow up</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+            <mat-card class="tarjeta">
+                <mat-card-content (click)="openWhatsApp()">WhatsApp</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+            <mat-card class="tarjeta">
+                <mat-card-content (click)="openTwitter()">Twitter</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+            <mat-card class="tarjeta">
+                <mat-card-content (click)="openFacebook()">Facebook</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+            <mat-card class="tarjeta">
+                <mat-card-content (click)="openInstagram()">Instagram</mat-card-content>
+            </mat-card>
+            <mat-divider></mat-divider>
+        </footer>
     </div>
-    <footer>
-        <mat-card>
-            <mat-card-content routerLink="/terms">Collect-Waste</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card>
-            <mat-card-content routerLink="/aboutus">About us</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card>
-            <mat-card-content routerLink="/followup">Follow up</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card>
-            <mat-card-content (click)="openWhatsApp()">WhatsApp</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card>
-            <mat-card-content (click)="openTwitter()">Twitter</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card>
-            <mat-card-content (click)="openFacebook()">Facebook</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-        <mat-card>
-            <mat-card-content (click)="openInstagram()">Instagram</mat-card-content>
-        </mat-card>
-        <mat-divider></mat-divider>
-    </footer>
+
 </div>

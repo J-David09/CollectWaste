@@ -1,13 +1,4 @@
-.fondo {
-    background-image: url(https://cdnwordpresstest-f0ekdgevcngegudb.z01.azurefd.net/es/wp-content/uploads/2023/03/Escombros-Emvarias-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100% !important; 
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    width: 100% !important;
-}
+
 .logo-right {
     align-content: end;
 }
@@ -22,11 +13,48 @@ mat-card:hover {
 img {
     opacity: 0.8;
 }
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 button {
     width: 100%
+}
+
+.fondo {
+    background-image: url(https://cdnwordpresstest-f0ekdgevcngegudb.z01.azurefd.net/es/wp-content/uploads/2023/03/Escombros-Emvarias-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    overflow: hidden; /* Evita el desplazamiento del contenido */
+}
+
+
+.contenedor {
+    max-width: 500px; /* Establece el ancho máximo del contenedor */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+mat-card {
+    width: 100%;
+    margin: 5px auto;
+}
+
+mat-card-content {
+    width: 100%; /* Establece el ancho al 100% para ocupar todo el ancho del mat-card */
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
 }

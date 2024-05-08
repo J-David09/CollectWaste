@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100% !important; 
+    height: 120vh; /* Cambiado a 100vh para que ocupe toda la altura de la pantalla */
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100% !important;
@@ -12,5 +12,7 @@ mat-card {
     opacity: 0.8;
 }
 .terms-box {
-    width: 1000px;
+    margin: 20px; /* Ajusta los márgenes para que se vea bien dentro del contenedor */
+    padding: 20px; /* Ajusta el padding para que se vea bien dentro del contenedor */
+    opacity: 0.8;
 }

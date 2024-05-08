@@ -24,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SolicitudesComponent } from './pages/solicitudes/solicitudes.component';
 import { ParametrosComponent } from './pages/parametros/parametros.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     MatCardModule,
     MatDividerModule,
     MatFormFieldModule,
+    MatInputModule,
     MatStepperModule,
     HttpClientModule,
     FormsModule,
