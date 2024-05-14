@@ -35,4 +35,11 @@ public class WasteTypeServiceImp implements WasteTypeService{
     public void delete(WasteType wasteType) {
         entityManager.remove(entityManager.merge(wasteType));
     }
+
+    @Override
+    public WasteType getById(int id) {
+        String query = "from WasteType where id = " + id;
+        return (WasteType)entityManager.createQuery(query, WasteType.class).getSingleResult();
+    }
+
 }

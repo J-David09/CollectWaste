@@ -9,7 +9,7 @@
             </mat-card-header>
 
             <p class="estado-recolecciones">
-                <span>Tener n cuenta que el orden del estado de las recolecciones es: 1: Solicitado, 2: En proceso de revisión, 3: Aceptado, 4: Terminado</span>
+                <span>Tener en cuenta que el orden del estado de las recolecciones es: 1: Solicitado, 2: En proceso de revisión, 3: Aceptado, 4: Terminado</span>
             </p>
 
             <div class="table-container">
@@ -26,7 +26,7 @@
                   <tbody>
                     <tr *ngFor="let registro of reports">
                       <td>{{ registro.direccion }}</td>
-                      <td>{{ registro.weigth }}</td>
+                      <td>{{ registro.weigth }} Kg</td>
                       <td>{{ registro.reportDay }}</td>
                       <td>{{ registro.reportRecollection }}</td>
                       <td>{{ registro.estado }}</td>

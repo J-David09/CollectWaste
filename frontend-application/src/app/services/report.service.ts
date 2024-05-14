@@ -20,4 +20,12 @@ export class ReportService {
   getByUser(user: any): Observable<any> {
     return this.http.get<Report>(`${this.baseUrl}/api/report/getByUser/${user}`);
   }
+
+  getAll(): Observable<any> {
+    return this.http.get<Report>(`${this.baseUrl}/api/report/getAll`);
+  }
+
+  update(report: Report): Observable<any> {
+    return this.http.post<Report>(`${this.baseUrl}/api/report/update`, report);
+  }
 }

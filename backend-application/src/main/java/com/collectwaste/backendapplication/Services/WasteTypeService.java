@@ -12,4 +12,6 @@ public interface WasteTypeService {
     void update (WasteType wasteType);
 
     void delete (WasteType wasteType);
+
+    WasteType getById (int id);
 }

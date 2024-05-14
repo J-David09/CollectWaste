@@ -16,7 +16,6 @@ public class ReportServiceImp implements ReportService{
     @PersistenceContext
     private EntityManager entityManager;
 
-
     @Override
     public void crete(Report report) {
         entityManager.persist(report);
@@ -27,5 +26,17 @@ public class ReportServiceImp implements ReportService{
         String query = "SELECT r FROM Report r WHERE r.user = " + user + "order by r.reportDay asc";
         return entityManager.createQuery(query, Report.class).getResultList();
     }
+
+    @Override
+    public List<Report> listAll() {
+        String query = "SELECT r FROM Report r order by r.reportDay asc";
+        return entityManager.createQuery(query, Report.class).getResultList();
+    }
+
+    @Override
+    public void update(Report report) {
+        entityManager.merge(report);
+    }
+
 
 }

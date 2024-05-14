@@ -1,1 +1,85 @@
-<p>solicitudes works!</p>
+<div class="fondo">
+    <div align="center" style="align-items: center; display: flex; justify-content: center; height: 200px;">
+        <img src="./../../../assets/logo_2.png" width="200" height="160" >
+    </div>
+    <div align="center" style="align-items: center; display: flex; justify-content: center;">
+        <mat-card class="terms-box">
+            <mat-card-header style="align-items: center; display: flex; justify-content: center;">
+                <mat-card-title>Usuario administrador {{user.name}}, Solicitudes realizadas:</mat-card-title>
+            </mat-card-header>
+            <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Id usuario</th>
+                      <th>Dirección</th>
+                      <th>Tipo de residuo</th>
+                      <th>Peso</th>
+                      <th>Día Reportado</th>
+                      <th>Día Recolección</th>
+                      <th>Observaciones</th>
+                      <th>Estado</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let registro of reports">
+                      <td>{{ registro.user}}</td>  
+                      <td>{{ registro.direccion }}</td>
+                      <td>{{ getWasteType(registro.wasteType || 0)}}</td>
+                      <td>{{ registro.weigth }} Kg</td>
+                      <td>{{ registro.reportDay }}</td>
+                      <td>{{ registro.reportRecollection }}</td>
+                      <td>{{registro.observations}}</td>
+                      <td>{{ registro.estado }}</td>
+                      <td>
+                        <button class="btn btn-primary" style="font-size: smaller;" (click)="openModal(modificarEstado, registro)">Modificar estado</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+        </mat-card>
+    </div>
+</div>
+
+
+<ng-template #modificarEstado let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Eliminar parametro</h4>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="name">Id recoleccion:</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="selectedReport.id" name="id" disabled="">
+            </div>
+            <div class="form-group">
+                <label for="id">Id usuario:</label>
+                <input type="number" class="form-control" id="idUser" [(ngModel)]="selectedReport.user" name="idUser" disabled>
+            </div>
+            <div class="form-group">
+                <label for="name">Dia reportado:</label>
+                <input type="text" class="form-control" id="reportado" [(ngModel)]="selectedReport.reportDay" name="reportado" disabled>
+            </div>
+            <div class="form-group">
+                <label for="name">Dia recoleccion:</label>
+                <input type="date" class="form-control" id="recoleccion" [(ngModel)]="selectedReport.reportRecollection" name="recoleccion">
+            </div>
+            <div class="form-group">
+                <label for="name">Estado:</label>
+                <select name="estado" id="estado" class="form-select" aria-label="Estado de recoleccion" aria-placeholder="Por favor seleccione el estado" [(ngModel)]="selectedReport.estado">
+                    <option value="Solicitado">Solicitado</option>
+                    <option value="En revision">En revision</option>
+                    <option value="Aceptado">Aceptado</option>
+                    <option value="Terminado">Terminado</option>
+                </select>
+            </div>
+          </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+      <button type="button" class="btn btn-success" (click)="guardarCambio()">Guardar</button>
+    </div>
+</ng-template>

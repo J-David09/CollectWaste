@@ -30,4 +30,9 @@ export class WasteTypeService {
   add (wasteType: WasteType): Observable<any> {
     return this.http.post<WasteType>(`${this.baseUrl}/api/waste/create`, wasteType);
   }
+
+  getById (id: any): Observable<any> {
+    return this.http.get<WasteType>(`${this.baseUrl}/api/waste/getById/${id}`);
+  }
+
 }

@@ -34,4 +34,9 @@ public class WasteTypeController {
     public void deleteWasteType(@RequestBody WasteType wasteType) {
         wasteTypeService.delete(wasteType);
     }
+
+    @GetMapping("/getById/{id}")
+    public WasteType getWasteTypeByReportId(@PathVariable int id) {
+        return wasteTypeService.getById(id);
+    }
 }

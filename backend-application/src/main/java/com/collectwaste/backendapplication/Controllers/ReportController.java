@@ -25,4 +25,14 @@ public class ReportController {
         int userInt = Integer.parseInt(user);
         return reportService.getByUser(userInt);
     }
+
+    @GetMapping("/getAll")
+    public List<Report> list() {
+        return reportService.listAll();
+    }
+
+    @PostMapping("/update")
+    public void updateReport(@RequestBody Report report) {
+        reportService.update(report);
+    }
 }
