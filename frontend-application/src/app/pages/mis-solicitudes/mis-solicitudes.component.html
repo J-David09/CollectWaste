@@ -1,0 +1,42 @@
+<div class="fondo">
+    <div align="center" style="align-items: center; display: flex; justify-content: center; height: 200px;">
+        <img src="./../../../assets/logo_2.png" width="200" height="160" >
+    </div>
+    <div align="center" style="align-items: center; display: flex; justify-content: center;">
+        <mat-card class="terms-box">
+            <mat-card-header style="align-items: center; display: flex; justify-content: center;">
+                <mat-card-title>Solicitudes del usuario: {{user.name}}</mat-card-title>
+            </mat-card-header>
+
+            <p class="estado-recolecciones">
+                <span>Tener n cuenta que el orden del estado de las recolecciones es: 1: Solicitado, 2: En proceso de revisión, 3: Aceptado, 4: Terminado</span>
+            </p>
+
+            <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Dirección</th>
+                      <th>Peso</th>
+                      <th>Día Reportado</th>
+                      <th>Día Solicitado para Recolección</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let registro of reports">
+                      <td>{{ registro.direccion }}</td>
+                      <td>{{ registro.weigth }}</td>
+                      <td>{{ registro.reportDay }}</td>
+                      <td>{{ registro.reportRecollection }}</td>
+                      <td>{{ registro.estado }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+        </mat-card>
+    </div>
+    
+    
+  </div>

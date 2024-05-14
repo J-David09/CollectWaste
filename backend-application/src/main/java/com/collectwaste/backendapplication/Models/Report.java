@@ -41,6 +41,10 @@ public class Report {
     private String observations;
 
     @Getter @Setter
+    @Column(name = "estado", length = 100, nullable = false)
+    private String estado;
+
+    @Getter @Setter
     @Column(name = "waste_type", nullable = false)
     private int wasteType;
 }

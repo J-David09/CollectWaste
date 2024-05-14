@@ -9,10 +9,12 @@ import { LoginComponent } from './security/login/login.component';
 import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 import { SolicitudesComponent } from './pages/solicitudes/solicitudes.component';
 import { ParametrosComponent } from './pages/parametros/parametros.component';
+import { MisSolicitudesComponent } from './pages/mis-solicitudes/mis-solicitudes.component';
 
 const routes: Routes = [
   { path: 'adminHome', component: AdminHomeComponent },
   { path: 'solicitudes', component: SolicitudesComponent},
+  { path: 'misSolicitudes', component: MisSolicitudesComponent},
   { path: 'parametros', component: ParametrosComponent},
   { path: 'home', component: HomeComponent },
   { path: 'garbage', component: GarbageCollectionComponent },

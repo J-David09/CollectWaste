@@ -26,15 +26,23 @@
         <div>
           <h4>Datos de recoleccion</h4>
           <mat-form-field>
+            <mat-label>Dirección</mat-label>
             <input type="text" id="direccion" [(ngModel)]="report.direccion" name="direccion" matInput placeholder="Dirección">
           </mat-form-field>
           <mat-form-field>
-            <input type="number" id="type" [(ngModel)]="report.wasteType" name="type" matInput placeholder="Tipo de residuo">
+            <mat-label>Tipo de residuo</mat-label>
+              <mat-select [(ngModel)]="report.wasteType" name="wasteType">
+                <mat-option *ngFor="let wasteType of wasteTypes" [value]="wasteType.id">
+                  {{ wasteType.name }}
+                </mat-option>
+              </mat-select>
           </mat-form-field>
           <mat-form-field>
+            <mat-label>Peso (KG)</mat-label>
             <input type="number" id="peso" [(ngModel)]="report.weigth" name="peso" matInput placeholder="Peso (KG)">
           </mat-form-field>
           <mat-form-field>
+            <mat-label>Fecha deseada para recoleccion</mat-label>
             <input type="date" id="fecha" [(ngModel)]="report.reportRecollection" name="fecha" matInput placeholder="Fecha deseada">
           </mat-form-field>
         </div>
@@ -54,3 +62,17 @@
   </div>
   
 </div>
+
+
+
+<ng-template #confirmation let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{tituloModal}}</h4>
+  </div>
+  <div class="modal-body">
+    <h5>{{bodyModal}}</h5>
+  </div>
+  <div class="modal-footer">
+    <button *ngIf="mostrarBoton" type="button" class="btn btn-primary" (click)="closeModal()">Ir a mis solicitudes</button>
+  </div>
+</ng-template>

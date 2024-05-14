@@ -25,6 +25,8 @@ import { SolicitudesComponent } from './pages/solicitudes/solicitudes.component'
 import { ParametrosComponent } from './pages/parametros/parametros.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MisSolicitudesComponent } from './pages/mis-solicitudes/mis-solicitudes.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { MatInputModule } from '@angular/material/input';
     AdminHomeComponent,
     HeaderComponent,
     SolicitudesComponent,
-    ParametrosComponent
+    ParametrosComponent,
+    MisSolicitudesComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     MatStepperModule,
+    MatSelectModule,
     HttpClientModule,
     FormsModule,
     FontAwesomeModule,

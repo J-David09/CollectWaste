@@ -5,6 +5,8 @@ import com.collectwaste.backendapplication.Services.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/report")
 @CrossOrigin(origins = "http://localhost:4200")
@@ -14,7 +16,13 @@ public class ReportController {
     private ReportService reportService;
 
     @PostMapping("/create")
-    public void createWasteType(@RequestBody Report report) {
+    public void createReport(@RequestBody Report report) {
         reportService.crete(report);
+    }
+
+    @GetMapping("/getByUser/{user}")
+    public List<Report> getReportByUser(@PathVariable String user) {
+        int userInt = Integer.parseInt(user);
+        return reportService.getByUser(userInt);
     }
 }

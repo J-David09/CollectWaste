@@ -6,5 +6,6 @@ export interface Report {
     reportDay?: String,
     reportRecollection?: String,
     observations?: String,
+    estado?: String,
     wasteType?: number
 }

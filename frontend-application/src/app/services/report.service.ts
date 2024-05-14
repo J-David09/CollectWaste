@@ -16,4 +16,8 @@ export class ReportService {
   create (report: Report): Observable<any> {
     return this.http.post<Report>(`${this.baseUrl}/api/report/create`, report);
   }
+
+  getByUser(user: any): Observable<any> {
+    return this.http.get<Report>(`${this.baseUrl}/api/report/getByUser/${user}`);
+  }
 }
