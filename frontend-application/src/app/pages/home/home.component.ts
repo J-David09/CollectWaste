@@ -20,6 +20,6 @@ export class HomeComponent {
   }
 
   openWhatsApp() {
-    window.open('https://wa.me/3215433283', '_blank');
+    window.open('https://wa.me/573215433283', '_blank');
   }
 }
